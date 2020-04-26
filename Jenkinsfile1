@@ -1,0 +1,11 @@
+node {
+    deleteDir();
+	try {
+		def jenkins_template = load "devops/Jenkins/template-pipeline/pipeline_Template.groovy"
+		jenkins_template.pipelineTemplate();
+	} catch (Exception e) {
+		throw e;
+	} finally {
+		//deleteDir();
+	}
+}
