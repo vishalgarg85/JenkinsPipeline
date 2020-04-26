@@ -1,6 +1,7 @@
 node {
     deleteDir();
 	try {
+		git 'https://github.com/vishalgarg85/JenkinsPipeline.git'
 		def jenkins_template = load "devops/Jenkins/template-pipeline/pipeline_Template.groovy"
 		jenkins_template.pipelineTemplate();
 	} catch (Exception e) {
